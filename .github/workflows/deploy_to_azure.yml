@@ -13,7 +13,7 @@ on:
 #
 # 2. Change these variables for your configuration:
 env:
-  AZURE_WEBAPP_NAME: Comp3979Lab3ns    # set this to your application's name
+  AZURE_WEBAPP_NAME: Comp3973Lab3nas    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '3.1.402'           # set this to the dot net version to use
 
@@ -42,7 +42,7 @@ jobs:
       - name: 'Run Azure webapp deploy action using publish profile credentials'
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: ${{ env.Comp3979Lab3ns }} # Replace with your app name
+          app-name: ${{ env.Comp3973Lab3nas }} # Replace with your app name
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_LAB3  }} # Define secret variable in repository settings as per action documentation
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
 
