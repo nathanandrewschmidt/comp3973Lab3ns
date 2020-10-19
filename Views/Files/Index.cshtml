@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Files";
+    var files = (string[]) ViewData["files"]; 
+}
+
+<div class="text-center">
+    <h1 class="display-4">Files</h1>
+</div>
+
+<ul>
+    @foreach(var item in files) {
+        string filename = @item.Substring(12, 5);
+        <li>
+            <a  asp-controller="Files"
+                asp-action="Content"
+                asp-route-id="@filename">
+                @filename
+            </a>
+        </li>
+    }
+</ul>
